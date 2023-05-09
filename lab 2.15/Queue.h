@@ -12,3 +12,4 @@ struct Queue {
 };
 
 void push(Queue& q, int d); int pull(Queue& q); void printQueue(const Queue& q);
+void clearQueue(Queue& q);

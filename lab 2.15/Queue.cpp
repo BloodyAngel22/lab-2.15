@@ -36,3 +36,13 @@ void printQueue(const Queue& q) {
 	}
 	printf("\b\b\b   \n");
 }
+
+void clearQueue(Queue& q) {
+	if (q.head == NULL) return;
+	for (q.head; q.head != NULL; q.head = q.head->next) {
+		Element* e = q.head;
+		q.head = q.head->next;
+		free(e);
+		if (q.head == NULL) return;
+	}
+}
